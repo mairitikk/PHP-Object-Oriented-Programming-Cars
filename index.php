@@ -8,44 +8,40 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta http-equiv=“Pragma” content=”no-cache”>
-<meta http-equiv=“Expires” content=”-1″>
-<meta http-equiv=“CACHE-CONTROL” content=”NO-CACHE”>
-<!-- CSS Stylesheets -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-<link rel="stylesheet" href="css/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv=“Pragma” content=”no-cache”>
+    <meta http-equiv=“Expires” content=”-1″>
+    <meta http-equiv=“CACHE-CONTROL” content=”NO-CACHE”>
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
 
-<title>Hello World Autos</title>   
+    <title>Hello World Autos</title>
 
 </head>
 
 <body>
+    <?php include "objects.php" ?>
 
-<?php $vehicles =
-    [
-        [ "Astro", "Estrella", "2021", 500, 50000, "veh-01.jpg" ],
-        [ "Terraza", "Spinneo", "2020", 30000, 31000, "veh-02.jpg" ],
-        [ "Sage", "Ecostar", "2014", 70000, 15000, "veh-03.jpg" ]
-    ]
-?>
 
-<div class='outer-div'>
-<h1><?php echo "Hello World Autos" ?></h1>
-<p class="slogan">Where everyone can afford to buy a vehicle!</p>
 
-<table class="vehicle-table" id="vehicle-table">
-    <colgroup>
-        <col width="20%"><col width="80%">
-    </colgroup>
-    <tbody>
-        <!-- rows of vehicles -->
-        <?php foreach($vehicles as $vehicle) {
+    <div class='outer-div'>
+        <h1><?php echo "Hello World Autos" ?></h1>
+        <p class="slogan">Where everyone can afford to buy a vehicle!</p>
 
-            $price = number_format($vehicle[4], 2);
+        <table class="vehicle-table" id="vehicle-table">
+            <colgroup>
+                <col width="20%">
+                <col width="80%">
+            </colgroup>
+            <tbody>
+                <!-- rows of vehicles -->
+                <?php foreach ($vehicles as $vehicle) {
 
-            echo <<<FOREACHVEHICLE
+                    $price = number_format($vehicle[4], 2);
+
+                    echo <<<FOREACHVEHICLE
             <tr>
                 <td class="top-aligned">
                     <img class="thumbnail" src="images/$vehicle[5]" alt="vehicle picture">
@@ -88,12 +84,12 @@
                 </td>
             </tr>
             FOREACHVEHICLE;
-        }
-        ?>
-    </tbody>
+                }
+                ?>
+            </tbody>
 
-</table>
-</div>
+        </table>
+    </div>
 
 </body>
 

@@ -51,7 +51,7 @@
                     <p class="vehicle-model">$vehicle->model</p>
                     <hr class="vehicle-hr">
                     <p class="right-aligned"><span class="data-label">Year: </span><span class="vehicle-year">$vehicle->year</span>
-                    &nbsp;&nbsp;<span class="data-label">Mileage: </span><span class="vehicle-mileage">$vehicle->milage</span></p>
+                    &nbsp;&nbsp;<span class="data-label">Mileage: </span><span class="vehicle-mileage">$vehicle->mileage</span></p>
                     <p class="vehicle-price right-aligned">$$price</p>
 
                     <!-- form for payment calculation -->
